@@ -173,10 +173,10 @@ class Content extends React.Component {
                         </div>
                         <div className="detail" id="publications">
                             <div className="icon">
-                                <i className="fs-lg icon-newspaper"></i><span className="mobile-title">作品展示</span>
+                                <i className="fs-lg icon-newspaper"></i><span className="mobile-title">GITHUB 作品展示</span>
                             </div>
                             <div className="info">
-                                <h4 className="title text-uppercase">作品展示</h4>
+                                <h4 className="title text-uppercase">GITHUB 作品展示</h4>
                                 <div className="content">
                                     <ul className="list-unstyled clear-margin">
                                         {publications.map((n, i) => {

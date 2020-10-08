@@ -27,6 +27,6 @@ export default {
         }),
     ],
     module: {
-        noParse: [/html2canvas/, /jspdf/],
+        // noParse: [/html2canvas/, /jspdf/],
     },
 }

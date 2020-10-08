@@ -122,7 +122,7 @@ const config = {
                 use: 'url-loader?limit=8192&name=' + assetsPath + '[hash].[ext]',
             },
         ],
-        noParse: [/html2canvas/, /jspdf/],
+        // noParse: [/html2canvas/, /jspdf/],
     },
     plugins: [
         // 进度条
@@ -206,7 +206,7 @@ if (isDev) {
             ...config.plugins,
             // html 中引入 dll.js 文件
             new HtmlWebpackIncludeAssetsPlugin({
-                assets: ['vendor.dll.js'],
+                assets: ['vendor.dll.js','0.dll.js','1.dll.js','2.dll.js',],
                 append: false,
                 publicPath: assetsPath,
             }),

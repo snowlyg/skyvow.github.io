@@ -8,7 +8,7 @@ import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import CompressionWebpackPlugin from 'compression-webpack-plugin'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
 import ProgressBarPlugin from 'progress-bar-webpack-plugin'
 import HappyPack from 'happypack'
 import os from 'os'
@@ -264,8 +264,8 @@ if (isProd) {
             minimizer: [
                 ...config.optimization.minimizer,
                 // 打包压缩 JS 文件
-                new UglifyJsPlugin({
-                    uglifyOptions: {
+                new TerserPlugin({
+                    terserOptions: {
                         warnings: false,
                         compress: {
                             drop_console: true,
